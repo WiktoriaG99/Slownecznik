@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinProjektZaliczeniowy.MainPage"
+             BackgroundColor="#3d3d3d"
+             Title="Słownecznik"
+             >
+    <ContentPage.Content>
+    <Grid HorizontalOptions="CenterAndExpand"
+          VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+
+        <Label Text="Słownecznik 🌻"
+               Grid.Row="0"
+               Grid.Column="0"
+               FontSize="30"
+               TextColor="#ebbb38"
+               HorizontalTextAlignment="Center"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               />
+        <Button x:Name="button_Begin"
+                Text="Rozpocznij"
+                Grid.Row="1"
+                Grid.Column="0"
+                FontSize="20"
+                TextColor="#3d3d3d"
+                BackgroundColor="#ebbb38"
+                VerticalOptions="Center"
+                CornerRadius="10"
+                Clicked="button_Begin_Clicked"
+                />
+        <Button x:Name="button_WordsDatabase"
+                Text="Baza słów"
+                Grid.Row="2"
+                Grid.Column="0"
+                FontSize="20"
+                TextColor="#3d3d3d"
+                BackgroundColor="#ebbb38"
+                VerticalOptions="Center"
+                CornerRadius="10"
+                Clicked="button_WordsDatabase_Clicked"
+                />
+        <Button x:Name="button_AuthorInfo"
+                Text="Informacje"
+                Grid.Row="3"
+                Grid.Column="0"
+                TextColor="#3d3d3d"
+                BackgroundColor="#ebbb38"
+                VerticalOptions="Center"
+                FontSize="20"
+                CornerRadius="10"
+                Clicked="button_AuthorInfo_Clicked"
+                />
+
+    </Grid>
+    </ContentPage.Content>
+</ContentPage>

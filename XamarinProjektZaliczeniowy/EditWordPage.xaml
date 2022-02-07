@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinProjektZaliczeniowy.EditWordPage"
+             BackgroundColor="#3d3d3d"
+             Title="Edytuj słowo">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="ID słowa:"
+                Grid.Row="0"
+                Grid.Column="0"
+                FontSize="20"
+                TextColor="#ebbb38"
+                />
+            <Label Text="{Binding ID}"
+                x:Name="BindedID"
+                Grid.Row="0"
+                Grid.Column="1"
+                FontSize="20"
+                TextColor="#ebbb38"
+                />
+            <Label Text="Słowo: "
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                FontSize="20"
+                TextColor="#ebbb38"
+                />
+            <Entry x:Name="wordEntry"
+                Placeholder="Podaj słowo..."
+                Text="{Binding word}"
+                Grid.Row="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                FontSize="20"
+                TextColor="#ebbb38"
+                PlaceholderColor="LightGray"
+                BackgroundColor="DimGray"
+                   />
+            <Label Text="Tłumaczenie: "
+                Grid.Row="3"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                FontSize="20"
+                TextColor="#ebbb38"   
+                />
+            <Entry x:Name="translationEntry"
+                Placeholder="Podaj tłumaczenie..."
+                Text="{Binding translation}"
+                Grid.Row="4"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                FontSize="20"
+                TextColor="#ebbb38"
+                PlaceholderColor="LightGray"
+                BackgroundColor="DimGray"
+                   />
+            <Label Text="Język: "
+                Grid.Row="5"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                FontSize="20"
+                TextColor="#ebbb38"
+                />
+            <Picker x:Name="picker" 
+                Grid.Row="6"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                FontSize="20"
+                TextColor="#ebbb38"
+                SelectedIndexChanged="Picker_SelectedIndexChanged"
+                BackgroundColor="DimGray"
+                   />
+            <Label Text="Kategoria: "
+                Grid.Row="7"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                FontSize="20"
+                TextColor="#ebbb38"
+                />
+            <Entry x:Name="categoryEntry"
+                Placeholder="Podaj kategorię..."
+                Text="{Binding category}"
+                Grid.Row="8"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                FontSize="20"
+                TextColor="#ebbb38"
+                PlaceholderColor="LightGray"
+                BackgroundColor="DimGray"
+                   />
+            <Button x:Name="saveWordButton"
+                Text="Zapisz zmianę"
+                Grid.Row="9"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                FontSize="20"
+                TextColor="#3d3d3d"
+                BackgroundColor="#ebbb38"
+                VerticalOptions="Center"
+                CornerRadius="10"
+                Clicked="saveWordButton_Clicked"
+                    />
+            <Button x:Name="deleteWordButton"
+                Text="Usuń słowo"
+                Grid.Row="10"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                FontSize="20"
+                TextColor="#3d3d3d"
+                BackgroundColor="#ebbb38"
+                VerticalOptions="Center"
+                CornerRadius="10"
+                Clicked="deleteWordButton_Clicked"
+                    />
+            <Button x:Name="goBackButton"
+                Text="Wstecz"
+                Grid.Row="11"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                FontSize="20"
+                TextColor="#3d3d3d"
+                BackgroundColor="#ebbb38"
+                VerticalOptions="Center"
+                CornerRadius="10"
+                Clicked="goBackButton_Clicked"
+                    />
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

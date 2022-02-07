@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinProjektZaliczeniowy.ChooseCoursePage"
+             BackgroundColor="#3d3d3d"
+             Title="Wybierz kategorię">
+    <ContentPage.Content>
+        <Grid HorizontalOptions="CenterAndExpand"
+          VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Label x:Name="BindedLang"
+                   Text=""
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="#ebbb38"
+                   HorizontalTextAlignment="Center"
+                   />
+
+            <ListView x:Name="listView"
+                      Grid.Row="1"
+                      Grid.Column="0"
+                      Margin="20"
+                      ItemSelected="listView_ItemSelected"
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                <Label Text="{Binding category}"
+                                       FontSize="20"
+                                       TextColor="#ebbb38"
+                                       />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button x:Name="button_BackToMainPage"
+                Text="Wstecz"
+                Grid.Row="2"
+                Grid.Column="0"
+                FontSize="20"
+                TextColor="#3d3d3d"
+                BackgroundColor="#ebbb38"
+                VerticalOptions="Center"
+                CornerRadius="10"
+                Clicked="button_BackToMainPage_Clicked"
+                />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

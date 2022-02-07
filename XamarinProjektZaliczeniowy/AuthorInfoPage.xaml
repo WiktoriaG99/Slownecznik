@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinProjektZaliczeniowy.AuthorInfoPage"
+             BackgroundColor="#3d3d3d"
+             Title="Informacje">
+    <ContentPage.Content>
+        <Grid HorizontalOptions="CenterAndExpand"
+          VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            
+            <Label Text="Aplikacja przeznaczona do nauki języków, umożliwiająca uporządkowanie słów ze względu na język i kategorie."
+                TextColor="#ebbb38"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                FontSize="20"
+                Grid.Row="0"
+                Grid.Column="0"
+                HorizontalTextAlignment="Center"
+                   />
+            <Label Text="Autorka: Wiktoria Gajda"
+                TextColor="#ebbb38"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                FontSize="20"
+                Grid.Row="1"
+                Grid.Column="0"
+                   />
+            <Button x:Name="button_BackToMainPage" 
+                Text="Wstecz"
+                Grid.Row="2"
+                Grid.Column="0"
+                FontSize="20"
+                TextColor="#3d3d3d"
+                BackgroundColor="#ebbb38"
+                VerticalOptions="CenterAndExpand"
+                CornerRadius="10"
+                Clicked="button_BackToMainPage_Clicked"
+                />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

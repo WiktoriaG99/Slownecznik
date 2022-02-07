@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinProjektZaliczeniowy.AddWordPage"
+             BackgroundColor="#3d3d3d"
+             Title="Dodaj słowo">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Text="Słowo: "
+                Grid.Row="0"
+                Grid.Column="0"
+                FontSize="20"
+                TextColor="#ebbb38"
+                />
+            <Entry x:Name="wordEntry"
+                Placeholder="Podaj słowo..." 
+                Grid.Row="1"
+                Grid.Column="0"
+                FontSize="20"
+                TextColor="#ebbb38"
+                PlaceholderColor="LightGray"
+                BackgroundColor="DimGray"
+                   />
+            <Label Text="Tłumaczenie: "
+                Grid.Row="2"
+                Grid.Column="0"
+                FontSize="20"
+                TextColor="#ebbb38"   
+                />
+            <Entry x:Name="translationEntry"
+                Placeholder="Podaj tłumaczenie..." 
+                Grid.Row="3"
+                Grid.Column="0"
+                FontSize="20"
+                TextColor="#ebbb38"
+                PlaceholderColor="LightGray"
+                BackgroundColor="DimGray"
+                   />
+            <Label Text="Język: "
+                Grid.Row="4"
+                Grid.Column="0"
+                FontSize="20"
+                TextColor="#ebbb38"
+                />
+            <Picker x:Name="picker"
+                Grid.Row="5"
+                Grid.Column="0"
+                FontSize="20"
+                TextColor="#ebbb38"
+                SelectedIndexChanged="languageEntry_SelectedIndexChanged"
+                BackgroundColor="DimGray"
+                   />
+            <Label Text="Kategoria: "
+                Grid.Row="6"
+                Grid.Column="0"
+                FontSize="20"
+                TextColor="#ebbb38"
+                />
+            <Entry x:Name="categoryEntry"
+                Placeholder="Podaj kategorię..." 
+                Grid.Row="7"
+                Grid.Column="0"
+                FontSize="20"
+                TextColor="#ebbb38"
+                PlaceholderColor="LightGray"
+                BackgroundColor="DimGray"
+                   />
+            <Button x:Name="addWordButton"
+                Text="Dodaj słowo"
+                Grid.Row="8"
+                Grid.Column="0"
+                FontSize="20"
+                TextColor="#3d3d3d"
+                BackgroundColor="#ebbb38"
+                VerticalOptions="Center"
+                CornerRadius="10"
+                Clicked="addWordButton_Clicked"
+                    />
+            <Button x:Name="goBackButton"
+                Text="Wstecz"
+                Grid.Row="9"
+                Grid.Column="0"
+                FontSize="20"
+                TextColor="#3d3d3d"
+                BackgroundColor="#ebbb38"
+                VerticalOptions="Center"
+                CornerRadius="10"
+                Clicked="goBackButton_Clicked"
+                    />
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

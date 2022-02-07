@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinProjektZaliczeniowy.WordsDatabasePage"
+             BackgroundColor="#3d3d3d"
+             Title="Baza słów">
+    <ContentPage.Content>
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <ListView x:Name="listViewWords"
+                      Grid.Row="0"
+                      Grid.Column="0"
+                      ItemsSource="{Binding listofWords}"
+                      ItemSelected="listViewWords_ItemSelected"
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text= "{Binding word}"
+                                  TextColor="#ebbb38"
+                        />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button x:Name="button_AddWord"
+                Text="Dodaj słowo"
+                Grid.Row="1"
+                Grid.Column="0"
+                FontSize="20"
+                TextColor="#3d3d3d"
+                BackgroundColor="#ebbb38"
+                VerticalOptions="Center"
+                CornerRadius="10"
+                Clicked="button_AddWord_Clicked"
+                />
+
+
+            <Button x:Name="button_BackToMainPage"
+                Text="Wstecz"
+                Grid.Row="2"
+                Grid.Column="0"
+                FontSize="20"
+                TextColor="#3d3d3d"
+                BackgroundColor="#ebbb38"
+                VerticalOptions="Center"
+                CornerRadius="10"
+                Clicked="button_BackToMainPage_Clicked"
+                />
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
